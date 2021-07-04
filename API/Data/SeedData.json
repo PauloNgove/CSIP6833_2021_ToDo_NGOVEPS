@@ -1,0 +1,62 @@
+[
+    {
+        "Task": "Project Proposal Submission",
+        "IsCompleted" : false,
+        "DueDate" : "2021-08-09",
+        "Username" : "Paulo"
+    },
+    {
+        "Task": "CSIP6833 Exam Project Submission",
+        "IsCompleted" : true,
+        "DueDate" : "2021-07-05",
+        "Username" : "Paulo"
+    },
+    {
+        "Task": "CSIP6853 Exam Project Submission",
+        "IsCompleted" : false,
+        "DueDate" : "2021-06-28",
+        "Username" : "Paulo"
+    },
+    {
+        "Task": "Project Assignment 1 Submission",
+        "IsCompleted" : false,
+        "DueDate" : "2021-08-09",
+        "Username" : "Paulo"
+    },
+    {
+        "Task": "Work Presentation Planning",
+        "IsCompleted" : false,
+        "DueDate" : "2021-09-09",
+        "Username" : "Sanele"
+    },
+    {
+        "Task": "Virtual Orientations",
+        "IsCompleted" : true,
+        "DueDate" : "2021-06-09",
+        "Username" : "Sanele"
+    },
+    {
+        "Task": "Server Maintance - New Client",
+        "IsCompleted" : true,
+        "DueDate" : "2021-08-21",
+        "Username" : "Sanele"
+    },
+    {
+        "Task": "Project Proposal Submission",
+        "IsCompleted" : false,
+        "DueDate" : "2021-06-09",
+        "Username" : "Sanele"
+    },
+    {
+        "Task": "Party Invitation",
+        "IsCompleted" : false,
+        "DueDate" : "2021-05-09",
+        "Username" : "Paulo"
+    },
+    {
+        "Task": "Family Gathering",
+        "IsCompleted" : false,
+        "DueDate" : "2021-06-26",
+        "Username" : "Paulo"
+    }
+]
