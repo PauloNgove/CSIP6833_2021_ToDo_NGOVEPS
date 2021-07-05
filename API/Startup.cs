@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using API.Data;
+using API.Middleware;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -42,21 +43,20 @@ namespace API
             })
                .AddSignInManager < SignInManager<IdentityUser>()
             .AddEntityFrameworkStore<DataContext>();
+            services.AddControllers();
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-    
-            }
+            app.UseMiddleware<ExceptionMiddleware>();
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
+            app.UseCors(x => x.AllAnyHeader().AllowAnyMethod().WithOrigins("https:\\localhos"));
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

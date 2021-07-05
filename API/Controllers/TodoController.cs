@@ -15,14 +15,14 @@ namespace API.Controllers
         {
             _context = context;
         }
-        [HttpGet("api/TodoItems/All")]
+        [HttpGet("api/todoItems/all")]
         public async Task<ActionResult<IEnumerable<TodoDto>>> TodoItems()
         {
             var todos = await _context.Todo.Where(s => s.Username = User.Identity.GetUserName());
             List<TodoDto> todoitems = new List<TodoDto>();
             foreach (var todo in todos)
             {
-                todoitems.Add(new ToDoDto
+                todoitems.Add(new TodoDto
                 {
 
                     Id = todo.Id,
@@ -33,7 +33,7 @@ namespace API.Controllers
             }
             return todoitems;
         }
-        [HttpGet("api/TodoItems/overdue")]
+        [HttpGet("api/todoItems/overdue")]
         public async Task<ActionResult<IEnumerable<TodoDto>>> TodoItems()
         {
             var todos = await _context.Todo.Where(opt =>
@@ -52,7 +52,7 @@ namespace API.Controllers
             }
             return Ok(todoitems);
         }
-        [HttpGet("api/TodoItems/{id}")]
+        [HttpGet("api/todoItems/{id}")]
         public async Task<ActionResult<TodoDto>> ToDoItem(int id)
         {
             var item = _context.Todo.FindAsync(id);
